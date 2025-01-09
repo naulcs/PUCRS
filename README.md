@@ -73,10 +73,12 @@ Selecione a opção desejada e siga as instruções para gerenciar o inventário
 ```
 GerenciadorDeProdutos/
 │
-├── app.js               # Arquivo principal da aplicação
-├── inventory.json       # Arquivo JSON para persistência de dados
+├── app.js               # Arquivo principal da aplicação (contém a interação com o usuário)
+├── db.js                # Arquivo com as funções de persistência de dados
+├── inventario.json      # Arquivo JSON para persistência de dados
 ├── package.json         # Configurações do projeto Node.js
 └── README.md            # Documentação do projeto
+
 ```
 
 ---
