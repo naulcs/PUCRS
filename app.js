@@ -1,26 +1,5 @@
-const fs = require('fs');
 const readline = require('readline-sync');
-
-const dataFile = './inventario.json';
-
-//função para carregar dados do inventário
-function carregarInv() {
-    if (fs.existsSync(dataFile)) {
-        const data = fs.readFileSync(dataFile, 'utf8');
-        return JSON.parse(data);
-    }
-    return [];
-}
-
-//função para salvar dado no inventário
-function salvarInv(inventario) {
-    fs.writeFileSync(dataFile, JSON.stringify(inventario, null, 2), 'utf8');
-}
-
-//gerar o ID 
-function gerarID(inventario) {
-    return inventario.length > 0 ? inventario[inventario.length - 1].id + 1 : 1;
-}
+const { carregarInv, salvarInv, gerarID } = require('./db');  
 
 //adicionar produto
 function addProduto(inventario) {
